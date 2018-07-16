@@ -1,0 +1,6 @@
+normally v-bind: but v-bind not necessary
+
+on the console we can modify element with writting the var and the content:
+exemple: app.message="ok";
+
+to push in todo list: app4.todos.push( { text: 'maitriser'})
