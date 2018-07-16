@@ -3,22 +3,19 @@ var app =new Vue({
     data: {
         message: 'Hello World!',
         link: 'http://google.com/',
+    },
+    methods: {
+        change : function () {
+            this.message = 'You can change the link thanks to the consol and type: app.link="your link here"';
+        }
     }
 })
 
-var app2 = new Vue({
-    el: '#app-2',
-    data: {
-      message: 'Vous avez affiché cette page le ' + new Date().toLocaleString()
-    }
-});
-
 var app3 = new Vue({
-    el: '#app-3',
+    el: '#app-2',
     data:{
         seen: true,
-        success: "Vous me voyez!",
-        fail: "Vous ne me voyez plus!"
+        success: "If you see this success alert, everything is fine! Click on this alert to close it.",
     },
     methods: {
         close: function () {
@@ -28,7 +25,7 @@ var app3 = new Vue({
 })
 
 var app4 = new Vue({
-    el: '#app-4',
+    el: '#app-3',
     data: {
       todos: [
         { text: 'Apprendre JavaScript' },
@@ -37,3 +34,4 @@ var app4 = new Vue({
       ]
     }
   })
+

@@ -4,45 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>VueJS tuto</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
 </head>
 
 <body>
 
-    <div class="ui inverted fixed menu">
-        <div class="header item">Tutoriel</div>
-    </div>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> VueJS Tutorial
+        </a>
+        <a href="chap1.html">Chapter 1</a>
+        <a href="chap2.html">Chapter 2</a>
+        <a href="chap3.html">Chapter 3</a>
+        <a href="chap4.html">Chapter 4</a>
+        <a href="chap5.html">Chapter 5</a>
+    </nav>
 
-    <div id="app">
-        <a :href="link" :title="message">{{ message }}</a>
-    </div>
-
-    <div id="app-2">
-        <span v-bind:title="message">
-            Passez votre souris sur moi pendant quelques secondes pour voir mon titre lié dynamiquement !
-        </span>
-    </div>
-
-    <div id="app-3">
-        <div v-if="seen">
-                <p>{{ success }}</p>
-                <button v-on:click="close">Click to disappear</button>
-        </div> 
-        
-   
-    </div>
-
-    
-    <div id="app-4">
-        <ol>
-            <li v-for="todo in todos">
-                {{ todo.text }}
-            </li>
-        </ol>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">VueJS Tutorial</h1>
+            <p id="welcome" class="lead">{{ message }}</p>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

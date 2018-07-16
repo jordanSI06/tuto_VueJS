@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS tuto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> VueJS Tutorial
+        </a>
+        <a href="chap1.html">Chapitre 1</a>
+        <a href="chap2.html">Chapitre 2</a>
+        <a href="chap3.html">Chapitre 3</a>
+        <a href="chap4.html">Chapitre 4</a>
+        <a href="chap5.html">Chapitre 5</a>
+    </nav>
+    <h2>Chapitre 1 </h2>
+
+
+    <div id="app">
+        <a v-on:click="change" :href="link" :title="message" target="_blank">{{ message }}</a>
+    </div>
+
+    <div id="app-2">
+        <div v-if="seen">
+            <div class="alert alert-success" role="alert" v-on:click="close">
+                {{success}}
+            </div>
+        </div>
+    </div>
+
+
+    <div id="app-3">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <a href="./..">Retour à l'accueil</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/chap1.js"></script>
+</body>
+
+</html>
