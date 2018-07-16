@@ -11,7 +11,7 @@ var app =new Vue({
     }
 })
 
-var app3 = new Vue({
+var app2 = new Vue({
     el: '#app-2',
     data:{
         seen: true,
@@ -24,14 +24,27 @@ var app3 = new Vue({
     }
 })
 
-var app4 = new Vue({
+var app3 = new Vue({
     el: '#app-3',
     data: {
       todos: [
-        { text: 'Apprendre JavaScript' },
-        { text: 'Apprendre Vue' },
-        { text: 'Créer quelque chose de génial' }
+        { text: 'Learn JavaScript' },
+        { text: 'Learn Vue' },
+        { text: 'Creating something awesome!' }
       ]
+    }
+  })
+
+  var app4 = new Vue({
+    el: '#app-4',
+    data: {
+      message:"Here, you can write anything you want.",
+      open:true
+    }, methods: {
+        close: function () {
+            this.message = "Fermé";
+            this.open = false;
+        }
     }
   })
 
