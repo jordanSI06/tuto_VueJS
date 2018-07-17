@@ -1,6 +1,17 @@
+Chapter 1:
+
 normally v-bind: but v-bind not necessary
 
 on the console we can modify element with writting the var and the content:
 exemple: app.message="ok";
 
 to push in todo list: app4.todos.push( { text: 'maitriser'})
+
+v-model: to apply a function or a variable in function of the input.
+
+Chapter 2:
+
+mounted and destroy instance are very important!! mounted will turn on a function before 
+the element will be mounted (ex: we order to the element to be incremented each second,
+when the element is mounted, the function is applied, and we need to destroy it later when we don't need it anymore.
+
