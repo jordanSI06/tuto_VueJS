@@ -29,8 +29,9 @@
 
     <div id="app-2">
         <div v-if="seen">
-            <div class="alert alert-success" role="alert" >
-                {{success}} <span v-on:click="close" aria-hidden="true">&times;</span>
+            <div class="alert alert-success" role="alert">
+                {{success}}
+                <span v-on:click="close" aria-hidden="true">&times;</span>
             </div>
         </div>
     </div>
@@ -45,10 +46,18 @@
     </div>
 
     <div id="app-4">
-        <textarea type="text"  v-model="message"></textarea>
-        <div class="alert alert-warning" role="alert" v-if="open">
-                {{message}}
-                <span v-on:click="close" aria-hidden="true">&times;</span> </div>
+        <textarea type="text" v-model="message"></textarea>
+        <div class="alert alert-warning" role="alert" v-if="open" :style="style">
+            {{ message }}
+            <span v-on:click="close" aria-hidden="true">&times;</span>
+        </div>
+    </div>
+
+    <div id="app-5">
+        <input type="checkbox" v-model="success">
+        <div class="alert alert-success" role="alert" :style="style()">
+            {{ message }}
+        </div>
     </div>
 
     <a href="./..">Retour à l'accueil</a>

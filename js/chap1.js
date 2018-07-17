@@ -33,17 +33,42 @@ var app3 = new Vue({
         { text: 'Creating something awesome!' }
       ]
     }
-  })
+})
 
-  var app4 = new Vue({
+var app4 = new Vue({
     el: '#app-4',
     data: {
       message:"Here, you can write anything you want.",
-      open:true
-    }, methods: {
+      open:true,
+      style: {background: 'yellow'},
+    }, 
+    methods: {
         close: function () {
-            this.message = "Fermé";
+            this.message = "Closed";
             this.open = false;
+        },
+    }
+  })
+
+  var app5 = new Vue({
+    el: '#app-5',
+    data: {
+      message:"",
+      success:true,
+    }, 
+    methods: {
+        close: function(){
+            this.success=false
+        },
+        style: function() {
+            if(this.success){
+                this.message="Oof, no error now."
+                return {background: 'green'}
+            }
+            else{
+                this.message="Now, an error!"
+                return {background: 'red'}
+            }
         }
     }
   })
