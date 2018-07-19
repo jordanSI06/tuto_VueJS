@@ -22,7 +22,12 @@
     </nav>
     <h2>Chapter 3 </h2>
 
- 
+    <div id="app">
+        First Name : {{ firstname }};<br>
+        Last Name: {{ lastname }};<br>
+        Full Name : <input type="text" v-model="fullname">
+    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/chap3.js"></script>
