@@ -3,12 +3,12 @@ let vm = new Vue({
     data: {
        firstname: 'Jean',
        lastname: 'Dela',
-       fullname: ''
+       
     },
-    /*computed: {
+    computed: {
         /*fullname: function(){ //Works as a getter but he cannot be redefined, just to 
             return this.firstname + ' ' + this.lastname;
-        }*
+        }*/
 
         fullname: {
             get: function() {
@@ -21,11 +21,11 @@ let vm = new Vue({
                 this.lastname = parts[1]
             }
         }
-    }*/
+    }
 
-    watch: {
+    /*watch: {
         fullname: function (value) {
             console.log('watch', value)
         }
-    }
+    }*/
 })

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS tuto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> VueJS Tutorial
+        </a>
+        <a href="chap1.html">Chapter 1</a>
+        <a href="chap2.html">Chapter 2</a>
+        <a href="chap3.html">Chapter 3</a>
+        <a href="chap4.html">Chapter 4</a>
+        <a href="chap5.html">Chapter 5</a>
+    </nav>
+    <h2>Chapter 4 </h2>
+
+    <div id ="app">
+        <p @click="demo2">
+                <a href="http://google.com" @click.prevent.stop="demo">Demonstration</a>
+        </p>
+        
+    </div>
+
+    <p>Tips: Go to the console to see the effect... ;)</p>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/chap4.js"></script>
+</body>
+
+</html>

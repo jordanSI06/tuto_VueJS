@@ -15,3 +15,28 @@ mounted and destroy instance are very important!! mounted will turn on a functio
 the element will be mounted (ex: we order to the element to be incremented each second,
 when the element is mounted, the function is applied, and we need to destroy it later when we don't need it anymore.
 
+____________
+
+Chapter 3:
+
+au lieu de method, nous utilisons computed, ce qui fait que :class="cls()" devient :class="cls" 
+et que seulement la var success va dire si cls est appelé ou non alors que le message comme
+il n'est pas défini dans la fonction, il n'a pas besoin d'être appelé
+
+watch va permettre de modifier directement les variables combinés même si computed est
+largement suffisant pour ce tuto
+_______________
+
+Chapter 4:
+
+Directive personnalisable
+
+possibilité d'ecouter évènement et faire modifieur => e.preventdefault pour arreter action
+mais sur l'écouteur, mettre @click.prevent fait la meme chose
+prevent va annuler l'action mais quand meme afficher les 2 méthode de demo 1 et 2
+tandis que stop va carrément afficher que la méthode de démo 2
+
+prevent: demo 1 demo 2
+prevent.stop: demo 1
+
+Car il ne va pas relancer les méthodes vers le haut (donc demo 2 ne se lance pas puisque parent de demo 1 est donc annulé)
